@@ -1,0 +1,50 @@
+ECE 3056 Fall 2018
+
+Lab Assignment 4
+
+
+Name:
+ Praneeth Eddu
+GT Username: peddu3
+ 
+
+Problem 1B
+:
+
+Execution time for 1 CPU:   67.6 s
+Execution time for 2 CPU's: 35.8 s
+Execution time for 4 CPU's: 33.4 s
+
+Analysis:
+The relationship between the CPU's and the total execution time is not linear. The CPU execution time was decreased by almost half going from 1 CPU - 2 CPUS. 
+However, there was not much of a difference going from 2 CPUS to 4 CPUS.
+Although parallel execution can pick up multiple processes to run simultaneously, the convoy effect still takes place as the processes needs wait till they are done executing even when they are run parallely. Hence, the execution times decreases at a far slower rate as the CPU count increases. 
+
+Problem 2B
+----------
+
+
+B.1: The CPU burst time is unknown while running the LRTF which makes the scheduling process unpredictable. Hence, it is impossible to implement LRTF beacuse of the unpredictability of scheduling. 
+
+B.2: Waiting time for FIFO: 389.9 s
+Waiting time for LRTF: 338.6s
+
+Analysis:
+The waiting time for LRTF is lower than FIFO's waiting time. This is because LRTF takes schedules the longest process first which allows the algorithm to reduce latency and avoid convoy effect.
+On the other hand, FIFO's processes are randomly scheduled and convoy effect comes into play.
+ 
+Problem 3B
+----------
+
+
+Wait time for Round Robin using 1 CPU
+Wait time for 200 ms: 285.2 s
+Wait time for 400 ms: 298.8 s
+Wait time for 600 ms: 314.5 s
+Wait time for 800 ms: 325.4 s
+
+Analysis:
+The wait time decreases with shorter time slices. shortest time slice is usually not recomended in real OS because they carry higher context switches compared to other time slices (the shorter the time slice, the higher the context switches).
+Hence, there should be a balance between waiting time and context switching.
+
+
